@@ -1,0 +1,108 @@
+/* Trusted-by, features, product split, steps, stats, solutions, testimonials, CTA */
+
+/* ---------- Trusted by ---------- */
+.trusted { padding: 2.6rem 0 1rem; text-align: center; }
+.trusted-label { color: var(--muted); font-size: .85rem; font-weight: 600; letter-spacing: .06em; text-transform: uppercase; margin-bottom: 1.4rem; }
+.logo-row { display: flex; flex-wrap: wrap; justify-content: center; gap: 1rem 2.6rem; }
+.logo-item {
+  display: inline-flex; align-items: center; gap: .5rem;
+  color: var(--muted); font-weight: 700; font-size: 1.02rem;
+  filter: grayscale(1); opacity: .65; transition: filter .25s ease, opacity .25s ease, transform .25s ease;
+}
+.logo-item:hover { filter: none; opacity: 1; transform: translateY(-2px); color: var(--text); }
+
+/* ---------- Features ---------- */
+.feature-card h3 { margin: 1.1rem 0 .5rem; }
+.feature-card p { color: var(--muted); font-size: .95rem; }
+.feature-icon {
+  display: inline-flex; align-items: center; justify-content: center;
+  width: 48px; height: 48px; border-radius: 14px;
+  background: var(--accent-soft); color: var(--accent);
+  transition: background .25s ease, color .25s ease, transform .25s ease;
+}
+.feature-card:hover .feature-icon { background: var(--grad); color: #fff; transform: scale(1.06) rotate(-4deg); }
+
+/* ---------- Product split ---------- */
+.split { display: grid; grid-template-columns: 1.05fr .95fr; gap: 3.5rem; align-items: center; }
+.split .btn { margin-top: 1.6rem; }
+
+.split-visual { position: relative; }
+.task-card {
+  position: relative; z-index: 1;
+  background: var(--bg-2); border: 1px solid var(--border); border-radius: var(--radius-lg);
+  padding: 1.4rem; box-shadow: var(--shadow-lg); display: grid; gap: .9rem;
+}
+.task-top { display: flex; justify-content: space-between; align-items: center; color: var(--accent); }
+.task-meta { display: flex; gap: 1.2rem; color: var(--muted); font-size: .85rem; }
+.task-progress { height: 8px; border-radius: 4px; background: var(--surface-2); overflow: hidden; }
+.task-progress i { display: block; height: 100%; border-radius: 4px; background: var(--grad); }
+.task-foot { display: flex; align-items: center; gap: .6rem; color: var(--muted); font-size: .82rem; }
+.ghost-card {
+  position: absolute; inset: 1.6rem -1.2rem -1.6rem 1.2rem; z-index: 0;
+  background: var(--surface); border: 1px solid var(--border); opacity: .55; padding: 0;
+}
+
+/* ---------- How it works ---------- */
+.steps { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1.3rem; counter-reset: step; position: relative; }
+.steps::before {
+  content: ""; position: absolute; top: 26px; left: 6%; right: 6%;
+  border-top: 2px dashed var(--border); z-index: 0;
+}
+.step { position: relative; z-index: 1; background: none; display: grid; gap: .5rem; align-content: start; }
+.step-n {
+  width: 52px; height: 52px; border-radius: 16px; display: grid; place-items: center;
+  background: var(--bg-2); border: 1px solid var(--border);
+  font-weight: 800; color: var(--accent); box-shadow: var(--shadow-sm);
+  transition: background .25s ease, color .25s ease, transform .25s ease;
+}
+.step:hover .step-n { background: var(--grad); color: #fff; transform: translateY(-4px); }
+.step p { color: var(--muted); font-size: .93rem; }
+
+/* ---------- Stats band ---------- */
+.stats-band {
+  padding: 3.2rem 0; background: var(--grad); color: #fff;
+  scroll-margin-top: var(--nav-h);
+}
+.stat { text-align: center; display: grid; gap: .2rem; }
+.stat-value { font-size: clamp(1.9rem, 4vw, 2.7rem); font-weight: 800; letter-spacing: -0.02em; font-variant-numeric: tabular-nums; }
+.stat-label { font-size: .9rem; opacity: .85; }
+
+/* ---------- Solutions ---------- */
+.solution-card h3 { margin: .9rem 0 .8rem; }
+.solution-card .pill { color: var(--accent); border-color: var(--accent-soft); background: var(--accent-soft); }
+
+/* ---------- Testimonials carousel ---------- */
+.carousel { max-width: 720px; margin: 0 auto; overflow: hidden; }
+.carousel-track { display: flex; transition: transform .55s cubic-bezier(.22, .8, .3, 1); }
+.quote { flex: 0 0 100%; text-align: center; display: grid; gap: 1.4rem; justify-items: center; }
+.quote blockquote { font-size: 1.2rem; line-height: 1.55; font-weight: 500; }
+.quote figcaption { display: flex; align-items: center; gap: .8rem; text-align: left; }
+.quote figcaption span { display: grid; }
+.quote small { color: var(--muted); }
+
+.carousel-nav { display: flex; align-items: center; justify-content: center; gap: 1.1rem; margin-top: 1.6rem; }
+.dots { display: flex; gap: .5rem; }
+.dot-btn { width: 9px; height: 9px; border-radius: 999px; background: var(--surface-2); border: 1px solid var(--border); transition: width .25s ease, background .25s ease; }
+.dot-btn.active { width: 26px; background: var(--accent); border-color: var(--accent); }
+
+/* ---------- Final CTA ---------- */
+.cta-band {
+  margin: 4rem auto 0; padding: 4.5rem 1.25rem; text-align: center;
+  background: radial-gradient(120% 160% at 50% 0%, #313a8c 0%, #141832 55%, #0b0d16 100%);
+  color: #fff; display: grid; gap: 1rem; justify-items: center;
+  border-top: 1px solid var(--border);
+  scroll-margin-top: var(--nav-h);
+}
+.cta-band p { opacity: .85; max-width: 480px; }
+.cta-band small { opacity: .65; }
+
+/* ---------- Responsive ---------- */
+@media (max-width: 900px) {
+  .split { grid-template-columns: 1fr; gap: 2.4rem; }
+  .steps { grid-template-columns: repeat(2, 1fr); }
+  .steps::before { display: none; }
+}
+@media (max-width: 560px) {
+  .steps { grid-template-columns: 1fr; }
+  .quote blockquote { font-size: 1.05rem; }
+}
