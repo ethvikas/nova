@@ -142,7 +142,7 @@ pure "data → view" mappers. Updating the entire page copy means editing one fi
 **https://nova-landing-yourname.vercel.app** ← replace with the deployed URL
 
 *(Deploys in ~2 minutes: `npm run build`, then drop the `dist/` folder on
-[Netlify Drop](https://app.netlify.com/drop) or `vercel --prod`.)*
+[[Netlify Drop](https://app.netlify.com/drop](https://adorable-youtiao-b706c4.netlify.app/)) or `vercel --prod`.)*
 
 ---
 
